@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="description" content="イラスト制作承ります">
+	<meta name="keywords" contact="イラスト制作,漫画制作">
+	<title>TomNen Illustration</title>
+	<link rel="stylesheet" href="toiawase.css" type="text/css">
+	<!--<link  rel="stylesheet" href="../CSS/box.css"  type="text/css">-->
+	<script src="jquery-3.6.0.min.js"></script>
+	<script>				//メールアドレス二回入力させてチェック。不一致なら警告出す。
+		function CheckMail() {
+	    // ↓↓ 入力値取得 ↓↓
+	    var input1 = $("#mail01").val();
+	    var input2 = $("#mail02").val();
+	    // ↓↓ メール比較 ↓↓
+	    if (input1 !== input2) {
+	        window.alert("メールアドレスが一致しません。");
+	        return false;
+	    } else {
+	        return true;
+	    }
+	}
+	</script>
+</head>
+<body class="contact">
+	<header>
+	<!--<img src="" width="auto" height="100px" alt="ロゴ">-->
+		<nav>
+		<!--<h2>サイトマップ</h2>-->
+			<ul>
+				<li><a href="../index.html">トップ</a></li>
+				<li><a href="#">お問い合わせ</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+			<h1>お問い合わせ</h1>
+			<p>以下のフォームに入力の上「送信内容の確認」ボタンをクリックして下さい。<br>
+                フォームでのお問合せのお返事については2～3日お時間を要する場合がございます。</p>
+			<form action="confirm.php" method="POST">
+			<table>
+			  <tr><td class="item">お名前<span>必須</span></td><td><input type="text" required="" size="25" maxlength="20" name="name"></td></tr>
+			  <tr><td class="item">メールアドレス<span>必須</span></td><td><input type="email" id="mail01" required="" size="45" name="mail"></td></tr>
+			  <tr><td class="item">メールアドレス確認</td><td><input type="email" id="mail02" required="" size="45" ></td></tr>
+
+              <tr><td class="item">ご希望納期</td><td><input type="text" name="days" placeholder="日数をご記入ください" size="25"></td></tr>
+			  <tr><td class="item">ご依頼タイトル</td>
+			  	  <td>
+			  	  	<select name="querytitle">
+			  	  		<option>アイコン制作</option>
+			  	  		<option>漫画制作</option>
+			  	  		<option>その他</option>
+			  	  	</select>
+			  	  </td>
+			  </tr>
+			  <tr><td class="item">ご依頼内容<span>必須</span></td>
+	      		  <td style=" height:300px; margin: 0px; padding: 0px;">
+	      		  	<textarea name="query" required="" style=" height: 90%; box-sizing: border-box; margin-left: 1rem;" rows="12" cols="36"></textarea>
+	      		  </td>
+	      	  </tr>
+	      	</table>
+	      	<p style="text-align:center;"><input type="submit" class="button"  value="送信内容の確認" onClick="return CheckMail()"></p>
+
+	      </form>
+	</main>
+	<footer>
+		<p><small>©2022 Tom Nen</small></p>
+	</footer>
+</body>
+</html>

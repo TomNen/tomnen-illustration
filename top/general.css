@@ -1,0 +1,18 @@
+@charset "utf-8";
+* {
+	padding:0px;
+	box-sizing:border-box;	/*初期化*/
+}
+:root {
+ 	--bw:96vw;
+ 	--lp:(var(--bw) / 1024);
+	font-size:calc(var(--lp) * 16px);
+	font-family: "Consolas", "BIZ  UD ゴシック", "メイリオ";
+	--cyan:rgb(153,255,255);
+	--b1:rgb(0,40,32);
+	--b2:rgb(0,60,84);
+	--b3:rgb(32,32,32) ;
+	--white:rgb(255,255,255);
+	--black:rgb(0,0,0);
+	block-size: 100vh;
+}

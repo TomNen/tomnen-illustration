@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/*section > h2 {
+	display:flex;
+}*/
+table {
+	width: 80%;
+    margin: auto;
+}
+
+p, h1 {
+    margin: 50px auto;
+    text-align: center;
+}
+header ul {
+    list-style-type: none;
+    margin: auto;
+}
+header ul li {
+    padding: 0 10px 0 10px;
+	margin: 0 10px;
+}
+td {					/*normalを指定して、td内の内容を単語区切りで改行*/
+	overflow-wrap: normal; 
+}
+.item {				/*クラスitem = テーブルの項目名のセル*/
+	background-color: #cfcfcf;	/*うすいグレー*/
+	padding-left:1rem;
+	width: 40%;
+}
+table td:not(.item){	/*テーブル内、記入するセル*/
+	background-color: #c0c0c0;	/*濃いグレー*/
+	height: 3rem;
+	padding: 0 1rem;
+}
+span {				/*必須のマーク*/
+	font-size: 0.9em;
+	color: #FFF;
+	background-color: red;
+	margin-left: 5px;
+	padding: 1px;
+}
+.button {			/*【戻る】以外のボタン*/
+	text-align: center;
+	width: 10rem;
+	height: 3rem;
+	font-size: 1em;
+}
+
+
+/**********　レ　ス　ポ　ン　シ　ブ　対　応　****************/
+@media screen and (max-width: 500px) {
+    table {
+        width: 90%;
+
+  }
+	.item {
+    width: 100%;
+    padding:2px 0;
+  }
+  table td {	
+  	/*width: 100%;*/
+    display: block;		/*← スマホだと2列だったテーブルが1列に変化*/
+	
+    height: 2rem;
+		/*↓ ↓ スマホだとtd要素が真ん中に配置されずズレるので下記で調整*/
+	padding-top: 0.5rem;	
+  }
+  textarea {
+  	margin-top: 1rem; /*テキストエリア上側に余白を*/
+  }
+  table td:not(.item){
+		padding-top: 1rem;
+	}
+	img {
+		width: 100px;
+		height: 100px;
+	}
+    main p {
+        text-align: justify; /*スマホ画面で文章中央揃えは不格好*/
+    }
+}

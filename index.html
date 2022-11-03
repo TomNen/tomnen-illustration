@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TomNen Illustration</title>
+<link rel = "stylesheet" href = "./top/style.css">
+<script src="./latest/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>  
+  <div class="prime">
+    <header>
+      <h1>Tom Nen Illustration</h1>
+      <nav>
+        <ul>
+          <li><button class="showicon">sample（アイコン）</button></li>
+          <li><button class="showcomic">sample（漫画）</button></li>
+          <li><a href="./latest/index.html">● お問い合わせ ●</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+        <section>
+          <h2>ご案内</h2>
+          <p>上記のボタンより作風をご覧いただき、制作依頼をご検討いただければ幸いです！</p>
+          <p>ご依頼は【<span style="color: cyan;">お問い合わせ</span>】ページよりご連絡いただけます。</p>
+        </section>
+        <section>
+        <h2>概要</h2>
+          <p>当サイトへお越しいただき、ありがとうございます。管理人のTom Nenと申します。</p>
+          <p>SNSのアイコンに使用するようなイラスト、ブログ等への掲載を想定した漫画の制作を承っております。</p>
+          
+        </section>
+    </main>
+  </div>
+  <footer>
+      <!--<ul>
+        <li><a href="../latest/index.html">お問い合わせはこちら</a></li>
+        <li><a href="public_html/about/privacy.htm">プライバシーポリシー</a></li>
+      </ul>-->
+      <p><small><span>©</span>2022 Tom Nen</small></p>
+  </footer>
+  <div class="modal_pop">
+        <div class="bg js-modal-close"></div>
+        <div class="modal_pop_main">
+            <img src="./img/flog.png">
+        </div>
+  </div>
+        
+  <div class="modal_pop2">
+        <div class="bg2 js-modal-close2"></div>
+            <div class="modal_pop_main2">
+              <img src="./img/comic.png">
+            </div>
+  </div>
+</body>
+
+<script>
+    $('.modal_pop').hide();
+    $('.showicon').on('click',function(){
+      $('.modal_pop').fadeIn();
+    })
+    $('.js-modal-close').on('click',function(){
+      $('.modal_pop').fadeOut();
+    })
+
+    $('.modal_pop2').hide();
+    $('.showcomic').on('click',function(){
+      $('.modal_pop2').fadeIn();
+    })
+    $('.js-modal-close2').on('click',function(){
+      $('.modal_pop2').fadeOut();
+    })
+</script>
+
+</html>
